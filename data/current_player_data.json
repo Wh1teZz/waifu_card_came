@@ -1,1 +1,1 @@
-{"Yookles": {"cards": {}, "handCount": 0, "handMax": 5}, "Hooman": {"cards": {}, "handCount": 0, "handMax": 5}}
+{"Yookles": {"cards": {}, "handCount": 0, "handMax": 5}, "Hooman": {"cards": {"sample card name": {"effect": "generic effect here", "rarity": "common / uncommon / rare / epic / legendary / unique", "totalNum": 5, "currentNum": 1}, "sample card name 2": {"effect": "make a request", "rarity": "common", "totalNum": 5, "currentNum": 1}}, "handCount": 2, "handMax": 5}}

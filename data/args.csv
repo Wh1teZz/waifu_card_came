@@ -1,0 +1,7 @@
+quit,q
+help,h
+draw,d
+play,p
+inspecthand,ih,inspecth
+inspectdeck,id,inspectd
+inspectcard,inspect,i,ic,inspectc
