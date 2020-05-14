@@ -1,11 +1,11 @@
-from classes import Deck, Hand, Card
+from util.classes import Deck, Hand, Card
 import json
 
 class Game:
     def __init__(self):
         self.deck = Deck()
         self.players = {}
-        with open("../data/current_player_data.json") as f:
+        with open("data/current_player_data.json") as f:
             players = json.load(f)
             for playerName in players:
                 # for ease of use
@@ -57,7 +57,7 @@ class Game:
             }
 
         # rewrite player json file
-        with open("../data/current_player_data.json", "w") as f1:
+        with open("data/current_player_data.json", "w") as f1:
             json.dump(playerJson, f1)
 
         # convert deck into dictionary format
@@ -71,7 +71,7 @@ class Game:
             }
 
         # rewrite deck json file
-        with open("../data/current_game_data.json", "w") as f2:
+        with open("data/current_game_data.json", "w") as f2:
             json.dump(deckJson, f2)
 
         print("Session has successfully saved!")
@@ -102,20 +102,27 @@ class Game:
     def displayDeck(self):
         self.deck.displayDeck()
 
+    def showPlayers(self):
+        players = ""
+        for player in self.players:
+            players += player
+            players += "\n"
+        print(players)
+
 
 
 # driver code for testing the functions
 
-game = Game()
-game.displayDeck()
-game.drawCard("Yookles")
-game.drawCard("Yookles")
-game.drawCard("Yookles")
-game.displayDeck()
-game.drawCard("Hooman")
-game.drawCard("Hooman")
-game.drawCard("Hooman")
-game.displayDeck()
-game.displayCards("Yookles")
-game.displayCards("Hooman")
-game.saveGame()
+# game = Game()
+# game.displayDeck()
+# game.drawCard("Yookles")
+# game.drawCard("Yookles")
+# game.drawCard("Yookles")
+# game.displayDeck()
+# game.drawCard("Hooman")
+# game.drawCard("Hooman")
+# game.drawCard("Hooman")
+# game.displayDeck()
+# game.displayCards("Yookles")
+# game.displayCards("Hooman")
+# game.saveGame()

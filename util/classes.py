@@ -14,7 +14,7 @@ class Deck:
         self.cards = []
         self.cardsTotal = 0
         self.cardsInDeck = 0
-        with open("../data/current_game_data.json", "r") as f:
+        with open("data/current_game_data.json", "r") as f:
             data = json.load(f)
             for key in data:
                 curr = Card(key, 
@@ -33,12 +33,7 @@ class Deck:
             print("Tried to draw from an empty deck")
             return None
 
-        print("cards in deck: ", self.cardsInDeck)
-
-
         randomCard = random.randint(0, self.cardsInDeck - 1)
-        print(randomCard)
-        self.displayDeck()
         index = 0
         currCardNum = 0
         currCard = self.cards[currCardNum]
@@ -86,6 +81,7 @@ class Deck:
 
     def displayDeck(self):
         print("\n")
+        print("There are currently", self.cardsInDeck, "cards in the deck.")
         for card in self.cards:
             print(card.name,"|",card.rarity,"| In the deck, there are",card.currentNum,"out of",card.totalNum)
         print("\n")
