@@ -1,0 +1,25 @@
+{
+    "sample card name" : 
+    {
+        "effect" : "generic effect here",
+        "rarity" : "common / uncommon / rare / epic / legendary / unique",
+        "totalInDeck" : 5,
+        "currentInDeck" : 5
+    },
+    
+    "sample card name 2" :
+    {
+        "effect" : "make a request",
+        "rarity" : "common",
+        "totalInDeck" : 5,
+        "currentInDeck" : 5
+    },
+
+    "omegalul" :
+    {
+        "effect" : "reverse the effect of the card that was played against you",
+        "rarity" : "unique",
+        "totalInDeck" : 1,
+        "currentInDeck" : 1
+    }
+}

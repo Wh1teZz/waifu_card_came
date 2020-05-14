@@ -1,0 +1,13 @@
+{
+    "Yookles" : {
+        "cards" : {},
+        "handCount" : 0,
+        "handMax" : 5
+    },
+
+    "Hooman" : {
+        "cards" : {},
+        "handCount" : 0,
+        "handMax" : 5
+    }
+}
