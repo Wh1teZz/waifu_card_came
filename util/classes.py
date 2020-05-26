@@ -96,7 +96,7 @@ class Hand:
 
 
     def play(self, index):
-        if index <= 0 or index > self.handCount:
+        if index <= 0 or index > len(self.cards):
             print("That is an invalid card number")
             return
         index -= 1
@@ -119,6 +119,7 @@ class Hand:
         print("You have drawn: ", card.name)
         print("Effect: ", card.effect)
         print("Rarity: ", card.rarity)
+        self.handCount += 1
 
         # if card is already in hand
         for cardInHand in self.cards:
@@ -129,18 +130,18 @@ class Hand:
         # otherwise, populate a new card and append to hand
         newCard = Card(card.name, card.effect, card.rarity, card.totalNum, 1)
         self.cards.append(newCard)
-        self.handCount += 1
+        
 
 
     def displayCards(self):
-        for i in range(self.handCount):
+        for i in range(len(self.cards)):
             copy = "copy" if self.cards[i].currentNum == 1 else "copies"
             print(i + 1, "| ", self.cards[i].name, "|", self.cards[i].currentNum, copy)
         print("\n")
     
 
     def inspectCard(self, index):
-        if index <= 0 or index > self.handCount:
+        if index <= 0 or index > len(self.cards):
             print("That is an invalid card number")
             return
         

@@ -79,18 +79,35 @@ class Game:
 
     def drawCard(self, player):
         if self._checkPlayer(player):
+            if not self.players[player].canDraw():
+                print(player + "'s hand is full!")
+                return
+
             card = self.deck.draw()
+
             if not card:
                 return
             self.players[player].cardIsDrawn(card)
 
 
     def playCard(self, player, index):
+        try:
+            index = int(index)
+        except ValueError:
+            print("The index should be a number!")
+            return
+
         if self._checkPlayer(player):
             self.players[player].play(index)
 
 
     def inspectCard(self, player, index):
+        try:
+            index = int(index)
+        except ValueError:
+            print("The index should be a number!")
+            return
+
         if self._checkPlayer(player):
             self.players[player].inspectCard(index)
 
