@@ -1,6 +1,6 @@
-quit, quit -- quit the game. Your progress will be saved. Shortcut(s): q
-draw, draw -- draw a card
+quit, quit -- quit the game. Your progress will be saved. Shortcut(s): q exit
+draw, draw playerName -- draw a card
 play, play playerName cardIndex -- play a card. Card numbers can be found with -> inspecthand. Shortcut(s): p
-inspecthand, inspecthand -- show a players hand. Shortcut(s): ih inspecth
+inspecthand, inspecthand playerName -- show a players hand. Shortcut(s): ih inspecth
 inspectdeck, inspectdeck -- show what cards are left in the deck. Shortcut(s): id inspectd
 inspectcard, inspectcard playerName cardIndex -- inspect a card. Displays effect and rarity. Shortcut(s): i inspect ic inspectc
